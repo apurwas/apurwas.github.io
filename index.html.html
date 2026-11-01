@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apurwa Sawarkar | Growth and GenAI product manager</title>
+<meta name="description" content="Apurwa Sawarkar: product manager (IIM Kashipur MBA, engineering gold medallist). Scaled a savings-account journey from 0 to 4.5k accounts a month, and builds GenAI products.">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F5F7F8; --surface:#FFFFFF; --ink:#0F172A; --muted:#576377; --line:#E1E6EB;
+  --accent:#0A7A60; --accent-soft:#E2F3EE; --accent-ink:#FFFFFF;
+  --night:#0F172A; --night-ink:#F1F5F9; --night-muted:#9AA8BC; --night-line:rgba(255,255,255,.12); --night-accent:#4ADE9F;
+  --blue:#1D4ED8; --blue-bg:#E0EBFF; --green:#0B7A55; --green-bg:#DCF3E8; --amber:#9A5B00; --amber-bg:#FDEBC8; --red:#B3302A; --red-bg:#FBE0DD; --grey:#475569; --grey-bg:#E8ECF1;
+  --head:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0B1220; --surface:#121B2D; --ink:#E8EEF7; --muted:#9AA8BC; --line:#25324A;
+    --accent:#4ADE9F; --accent-soft:#12302A; --accent-ink:#06231A;
+    --night:#070D18; --night-accent:#4ADE9F;
+    --blue:#8DB2FF; --blue-bg:#1A2A52; --green:#6FE3B4; --green-bg:#12392C; --amber:#F5C968; --amber-bg:#3A2D0E; --red:#FF9C94; --red-bg:#40201D; --grey:#B6C2D4; --grey-bg:#232F45;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+h1,h2,h3,h4,h5{margin:0;font-family:var(--head);font-weight:800;letter-spacing:-0.03em;line-height:1.1}
+h2{font-size:clamp(28px,3.8vw,42px)}
+p{margin:0 0 14px;max-width:66ch}
+[hidden]{display:none!important}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid var(--accent);cursor:pointer;font-family:var(--body);transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{box-shadow:0 8px 22px rgba(10,122,96,.28)}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.ghost:hover{background:var(--accent-soft)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.sec{padding:96px 0 0}
+.sec-head{max-width:680px;margin-bottom:36px}
+.sec-head p{color:var(--muted);font-size:18px;margin-top:12px}
+
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+::view-transition-group(*){animation-duration:.55s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.3s}
+
+/* nav */
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:var(--accent);z-index:40}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;letter-spacing:-0.02em;color:var(--ink);text-decoration:none;font-size:18px}
+.mono{width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--surface);display:grid;place-items:center;font-size:14px;letter-spacing:0}
+.nav ul{display:flex;gap:28px;align-items:center;margin:0;padding:0;list-style:none;font-size:15px;font-weight:500}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--ink)}
+.nav .pill{padding:9px 18px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-weight:600}
+.nav .pill:hover{color:var(--accent-ink)}
+@media(max-width:720px){.nav li.hide-s{display:none}}
+
+/* hero */
+.hero{padding:76px 0 24px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+@media(max-width:960px){.hero .wrap{grid-template-columns:1fr;gap:40px}}
+.open{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-bottom:24px}
+.open i{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+@media (prefers-reduced-motion:no-preference){.open i{animation:ping 2s infinite}}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(10,122,96,.5)}70%{box-shadow:0 0 0 9px rgba(10,122,96,0)}100%{box-shadow:0 0 0 0 rgba(10,122,96,0)}}
+.hero h1{font-size:clamp(42px,6.2vw,76px)}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .sub{font-size:clamp(18px,1.9vw,21px);color:var(--muted);margin-top:24px;max-width:48ch}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.facts span{font-size:14px;font-weight:600;padding:6px 13px;border-radius:8px;background:var(--surface);border:1px solid var(--line)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .hero .open{animation:rise .7s ease both}
+  .hero h1{animation:rise .7s .06s ease both}
+  .hero .sub{animation:rise .7s .14s ease both}
+  .hero .cta{animation:rise .7s .22s ease both}
+  .hero .facts{animation:rise .7s .3s ease both}
+  .tl{animation:rise .8s .2s ease both}
+}
+.tl{background:var(--night);color:var(--night-ink);border-radius:22px;padding:10px 10px 6px;box-shadow:0 30px 70px rgba(15,23,42,.22);border:1px solid var(--night-line)}
+.tl .cap{font-size:13px;font-weight:600;color:var(--night-muted);padding:16px 18px 8px}
+.tl a{display:grid;grid-template-columns:150px 1fr 20px;gap:14px;align-items:center;padding:16px 18px;border-radius:14px;color:var(--night-ink);text-decoration:none;transition:background .2s}
+.tl a:hover{background:rgba(255,255,255,.07)}
+.tl .n{font-family:var(--head);font-size:clamp(24px,2.6vw,32px);font-weight:800;letter-spacing:-0.04em;color:var(--night-accent);line-height:1.05}
+.tl .d{font-size:14.5px;line-height:1.4;color:var(--night-muted)}
+.tl .d b{display:block;color:var(--night-ink);font-weight:600;font-size:15px}
+.tl .ar{color:var(--night-muted);transition:transform .2s}
+.tl a:hover .ar{transform:translateX(4px);color:var(--night-accent)}
+@media(max-width:520px){.tl a{grid-template-columns:1fr 20px}.tl .n{grid-column:1/-1}.tl .ar{display:none}.tl .d{grid-column:1/-1}}
+
+/* work cards */
+.filters{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.filters button{font:600 14.5px var(--body);padding:8px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:all .2s}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(15,23,42,.13);border-color:transparent}
+.card .cv{height:250px;background:var(--accent-soft);display:grid;place-items:center;position:relative;overflow:hidden}
+.card .cv.dark{background:var(--night)}
+.card .tx{padding:26px 28px 28px;display:flex;flex-direction:column;flex:1}
+.tag{display:inline-block;font-size:12.5px;font-weight:700;padding:4px 11px;border-radius:999px;background:var(--accent-soft);color:var(--accent);align-self:flex-start;margin-bottom:12px}
+.tag.blue{background:var(--blue-bg);color:var(--blue)}
+.tag.amber{background:var(--amber-bg);color:var(--amber)}
+.card h3{font-size:clamp(23px,2.5vw,28px);margin-bottom:10px}
+.card p{font-size:16px;color:var(--muted);margin-bottom:18px}
+.card .res{font-weight:700;color:var(--ink);font-size:15.5px;margin-bottom:18px}
+.card .go{margin-top:auto;font-weight:700;color:var(--accent);display:inline-flex;gap:8px;transition:gap .2s}
+.card:hover .go{gap:14px}
+.card.off{display:none}
+.soon{margin-top:22px;border:1.5px dashed var(--line);border-radius:18px;padding:22px 28px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center;justify-content:space-between}
+.soon b{color:var(--ink);font-family:var(--head);font-size:18px}
+/* card visuals */
+.big0{text-align:center;color:var(--night-ink);padding:0 24px;width:100%}
+.big0 .num{font-family:var(--head);font-weight:800;font-size:clamp(44px,6vw,64px);letter-spacing:-0.05em;color:var(--night-accent);line-height:1}
+.big0 .lab{font-size:14px;color:var(--night-muted);margin-top:8px}
+.big0 .rail{height:6px;border-radius:6px;background:linear-gradient(90deg,rgba(255,255,255,.1),var(--night-accent));margin:22px auto 0;max-width:300px;position:relative}
+.big0 .rail::before,.big0 .rail::after{content:"";position:absolute;top:50%;width:12px;height:12px;border-radius:50%;transform:translateY(-50%)}
+.big0 .rail::before{left:-2px;background:#fff}
+.big0 .rail::after{right:-2px;background:var(--night-accent)}
+.win{width:min(300px,86%);background:var(--surface);color:var(--ink);border-radius:14px;overflow:hidden;box-shadow:0 18px 40px rgba(15,23,42,.18);border:1px solid var(--line)}
+.win .bar{padding:10px 14px;background:var(--bg);border-bottom:1px solid var(--line);font-size:12.5px;display:flex;justify-content:space-between;color:var(--muted)}
+.win .bar b{color:var(--ink);font-family:var(--head)}
+.win .in{padding:12px 14px}
+.win .ln{display:flex;align-items:center;gap:9px;font-size:13.5px;padding:5px 0}
+.win .ln i{width:17px;height:17px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:10px;font-style:normal;display:grid;place-items:center;font-weight:800}
+.chips2{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips2 b{font-size:11.5px;font-weight:700;padding:4px 8px;border-radius:6px;font-family:var(--body)}
+.c-am{background:var(--amber-bg);color:var(--amber)}
+.c-rd{background:var(--red-bg);color:var(--red)}
+.c-gy{background:var(--grey-bg);color:var(--grey)}
+.c-bl{background:var(--blue-bg);color:var(--blue)}
+.c-gr{background:var(--green-bg);color:var(--green)}
+
+/* phones */
+.phone{width:262px;height:520px;border-radius:38px;background:#0F172A;padding:9px;box-shadow:0 26px 60px rgba(15,23,42,.3),inset 0 0 0 1.5px rgba(255,255,255,.16);position:relative}
+.phone.sm{width:168px;height:330px;border-radius:28px;padding:6px;box-shadow:0 14px 30px rgba(15,23,42,.25),inset 0 0 0 1px rgba(255,255,255,.16)}
+.screen{width:100%;height:100%;border-radius:30px;background:var(--surface);color:var(--ink);position:relative;overflow:hidden}
+.phone.sm .screen{border-radius:22px}
+.notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:66px;height:17px;border-radius:12px;background:#0F172A;z-index:3}
+.phone.sm .notch{width:42px;height:11px;top:6px}
+.pg{position:absolute;left:18px;right:18px;top:46px;height:5px;border-radius:5px;background:var(--line);overflow:hidden}
+.pg i{display:block;height:100%;width:33%;background:var(--accent);border-radius:5px;transition:width .7s cubic-bezier(.2,.8,.2,1)}
+.phone.sm .pg{left:12px;right:12px;top:30px;height:4px}
+.sc{position:absolute;left:18px;right:18px;top:70px;opacity:0;transform:translateY(12px);transition:opacity .45s,transform .45s;pointer-events:none}
+.sc.on{opacity:1;transform:none;pointer-events:auto}
+.phone.sm .sc{left:12px;right:12px;top:46px}
+.sc small{font-size:12px;color:var(--muted);font-weight:600}
+.sc h5{margin:4px 0 8px;font-size:19px;letter-spacing:-0.03em}
+.phone.sm .sc h5{font-size:14px}
+.sc p{font-size:13.5px;color:var(--muted);line-height:1.5;margin:0 0 10px}
+.ld{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}
+.ld:last-child{border-bottom:0}
+.av{width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:11.5px;flex:none}
+.phone.sm .av{width:22px;height:22px;font-size:9px}
+.ld div{flex:1;min-width:0}
+.ld b{display:block;font-size:13.5px;line-height:1.25}
+.ld span{font-size:11.5px;color:var(--muted)}
+.phone.sm .ld b{font-size:10.5px}.phone.sm .ld span{font-size:9px}.phone.sm .ld{padding:6px 0;gap:7px}
+.st{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:6px;white-space:nowrap}
+.phone.sm .st{font-size:8px;padding:2px 5px}
+.row2{display:flex;justify-content:space-between;font-size:13px;padding:9px 0;border-bottom:1px solid var(--line)}
+.row2 b{font-weight:600}
+.tick{width:60px;height:60px;border-radius:50%;background:var(--green-bg);color:var(--green);display:grid;place-items:center;font-size:28px;font-weight:800;margin:8px 0 12px}
+.pcta{position:absolute;left:18px;right:18px;bottom:22px;height:46px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:700;display:grid;place-items:center;font-size:15px;transition:background .4s}
+.phone.sm .pcta{left:12px;right:12px;bottom:14px;height:30px;font-size:11px;border-radius:8px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
+.tabs button{font:600 13.5px var(--body);padding:7px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:all .2s}
+.tabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.capt{font-size:12.5px;color:var(--muted);text-align:center;margin:12px auto 0;max-width:36ch}
+/* my leads phone */
+.fchips{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}
+.fchips::-webkit-scrollbar{display:none}
+.fchips button{font:600 11.5px var(--body);padding:5px 10px;border-radius:999px;border:1.2px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap}
+.fchips button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.search{border:1px solid var(--line);border-radius:9px;padding:7px 10px;font-size:12px;color:var(--muted);margin:2px 0 10px;background:var(--bg)}
+.ml-list .ld{transition:opacity .3s}
+.ml-list .ld[hidden]{display:none}
+.resend{font-size:11px;font-weight:700;color:var(--accent)}
+/* face scan */
+.scan{position:relative;width:170px;height:190px;margin:6px auto 14px}
+.scan .corner{position:absolute;width:30px;height:30px;border:3px solid var(--accent)}
+.scan .c1{left:0;top:0;border-right:0;border-bottom:0;border-radius:10px 0 0 0}
+.scan .c2{right:0;top:0;border-left:0;border-bottom:0;border-radius:0 10px 0 0}
+.scan .c3{left:0;bottom:0;border-right:0;border-top:0;border-radius:0 0 0 10px}
+.scan .c4{right:0;bottom:0;border-left:0;border-top:0;border-radius:0 0 10px 0}
+.scan svg{position:absolute;inset:14px 18px;width:calc(100% - 36px);height:calc(100% - 28px)}
+.scan .line{position:absolute;left:8px;right:8px;height:3px;border-radius:3px;background:var(--accent);box-shadow:0 0 14px var(--accent);top:12%}
+@media (prefers-reduced-motion:no-preference){.scan .line{animation:sweep 3s ease-in-out infinite}}
+@keyframes sweep{0%,100%{top:10%}50%{top:84%}}
+.verified{display:flex;align-items:center;gap:8px;justify-content:center;font-weight:700;color:var(--green);background:var(--green-bg);border-radius:10px;padding:10px;font-size:14px}
+
+/* highlights, experience, about */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.three{grid-template-columns:1fr}}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+.tile .ic{width:40px;height:40px;border-radius:11px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;margin-bottom:16px}
+.tile h3{font-size:21px;margin-bottom:8px}
+.tile p{font-size:15.5px;color:var(--muted);margin:0}
+.xp{border-bottom:1px solid var(--line)}
+.xp details{border-top:1px solid var(--line)}
+.xp summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:180px 1fr 28px;gap:12px 28px;align-items:center;padding:24px 4px}
+.xp summary::-webkit-details-marker{display:none}
+.xp summary:hover .co{color:var(--accent)}
+.xp .when{font-size:14.5px;color:var(--muted);font-weight:500}
+.xp .co{font-family:var(--head);font-size:clamp(20px,2.3vw,25px);font-weight:800;letter-spacing:-0.025em;transition:color .15s}
+.xp .role{font-size:15.5px;color:var(--muted)}
+.xp .ico{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);position:relative;transition:transform .25s,background .2s}
+.xp .ico::before,.xp .ico::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:2px;background:var(--ink);transform:translate(-50%,-50%);border-radius:2px}
+.xp .ico::after{transform:translate(-50%,-50%) rotate(90deg);transition:opacity .2s}
+.xp details[open] .ico{background:var(--accent-soft);transform:rotate(180deg)}
+.xp details[open] .ico::after{opacity:0}
+.xp .body{padding:0 4px 28px 208px}
+.xp ul{margin:0;padding-left:20px}
+.xp li{margin-bottom:8px;max-width:70ch}
+@media(max-width:760px){.xp summary{grid-template-columns:1fr 28px}.xp .when{grid-column:1/-1}.xp .body{padding-left:4px}}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:32px}}
+.about p{font-size:18px}
+.flist{list-style:none;margin:0;padding:0}
+.flist li{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+.flist li:first-child{padding-top:0}
+.flist b{display:block;font-weight:600}
+.flist span{color:var(--muted);font-size:15px}
+.skills h4{font-size:14.5px;color:var(--muted);font-weight:700;letter-spacing:0;margin:20px 0 10px;font-family:var(--body)}
+.chipset{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.chipset li{font-size:14.5px;font-weight:500;padding:6px 14px;border-radius:8px;background:var(--surface);border:1px solid var(--line)}
+.contact{margin-top:110px;background:var(--night);color:var(--night-ink);padding:88px 0}
+.contact h2{font-size:clamp(34px,5.4vw,64px);max-width:16ch}
+.contact p{color:var(--night-muted);font-size:19px;margin-top:18px}
+.contact .btn.ghost{color:var(--night-ink);border-color:var(--night-line)}
+.contact .btn.ghost:hover{background:rgba(255,255,255,.08)}
+footer{background:var(--night);color:var(--night-muted);font-size:14px;padding:0 0 38px}
+footer .wrap{border-top:1px solid var(--night-line);padding-top:22px}
+
+/* ===== case study template ===== */
+.crumb{display:inline-block;margin:30px 0 0;font-weight:600;text-decoration:none;font-size:15px}
+.chead{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;margin-top:18px}
+@media(max-width:940px){.chead{grid-template-columns:1fr;gap:32px}}
+.chead h1{font-size:clamp(36px,5.4vw,64px);margin:6px 0 0}
+.chead .lede{font-size:clamp(18px,2vw,22px);color:var(--muted);margin-top:22px;max-width:36em;line-height:1.5}
+.cviz{background:var(--accent-soft);border-radius:26px;padding:32px 20px 26px;display:grid;place-items:center;min-height:380px}
+.cviz.dark{background:var(--night)}
+.glance{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.glance div{padding:20px 22px;border-right:1px solid var(--line);font-size:15px}
+.glance div:last-child{border-right:0}
+.glance span{display:block;color:var(--muted);font-size:13px;font-weight:600;margin-bottom:4px}
+.glance b{font-weight:700;line-height:1.35;display:block}
+@media(max-width:820px){.glance{grid-template-columns:1fr 1fr}.glance div:nth-child(2){border-right:0}.glance div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.cs-sec{display:grid;grid-template-columns:220px 1fr;gap:48px;padding:56px 0 0;margin-top:56px;border-top:1px solid var(--line)}
+@media(max-width:860px){.cs-sec{grid-template-columns:1fr;gap:18px;padding-top:40px;margin-top:40px}}
+.cs-k{font-family:var(--head);font-weight:800;font-size:15px;color:var(--accent);letter-spacing:-0.01em}
+.cs-k b{display:block;font-size:22px;color:var(--ink);letter-spacing:-0.03em;margin-top:4px}
+.cs-c p{font-size:18px;color:var(--ink)}
+.cs-c .m{color:var(--muted)}
+.cs-c h3{font-size:22px;margin:30px 0 10px;letter-spacing:-0.02em}
+.cs-c h3:first-child{margin-top:0}
+.callout{background:var(--accent-soft);border-radius:16px;padding:22px 26px;margin:22px 0;font-size:19px;line-height:1.5;font-weight:600;letter-spacing:-0.01em;color:var(--ink)}
+.callout span{display:block;font-size:13px;color:var(--accent);font-weight:700;margin-bottom:6px;letter-spacing:0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 6px}
+@media(max-width:760px){.stats{grid-template-columns:1fr}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.stat .n{font-family:var(--head);font-weight:800;font-size:clamp(30px,3.6vw,42px);letter-spacing:-0.045em;color:var(--accent);line-height:1}
+.stat .d{margin-top:10px;font-size:15.5px;line-height:1.45}
+.mt{width:100%;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);margin:8px 0}
+.mt .r{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:15px 20px;border-top:1px solid var(--line);font-size:16px}
+.mt .r:first-child{border-top:0}
+.mt .r b{font-weight:700}
+@media(max-width:600px){.mt .r{grid-template-columns:1fr;gap:2px}}
+.flow{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0;padding:0;list-style:none;counter-reset:s}
+.flow li{counter-increment:s;flex:1 1 140px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:15px;line-height:1.4;font-weight:600}
+.flow li::before{content:counter(s);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:800;margin-bottom:8px}
+.ba{margin:18px 0 6px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.ba .row{margin-bottom:18px}
+.ba .row:last-child{margin-bottom:0}
+.ba .lab{display:flex;justify-content:space-between;gap:12px;font-size:15px;margin-bottom:8px;font-weight:600;flex-wrap:wrap}
+.ba .lab span{color:var(--muted);font-weight:500}
+.ba .track{height:16px;border-radius:8px;background:var(--grey-bg);overflow:hidden}
+.ba .fill{height:100%;border-radius:8px}
+.ba .fill.b{background:var(--grey);width:100%}
+.ba .fill.a{background:var(--accent);width:2.6%;min-width:8px}
+.ba .note{font-size:13px;color:var(--muted);margin-top:14px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+@media(max-width:700px){.cols2{grid-template-columns:1fr}}
+.pc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.pc h4{font-size:18px;margin-bottom:8px;letter-spacing:-0.02em}
+.pc p{font-size:16px;margin:0;color:var(--muted)}
+.pc .t{font-size:14.5px;padding-top:10px;margin-top:12px;border-top:1px dashed var(--line)}
+.pc .t b{color:var(--ink)}
+.ticks{list-style:none;margin:10px 0;padding:0}
+.ticks li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:10px 0;border-top:1px solid var(--line);font-size:16.5px;line-height:1.5}
+.ticks li:first-child{border-top:0}
+.ticks li::before{content:"\2713";font-weight:800;color:var(--green)}
+.ticks.todo li::before{content:"\25CB";color:var(--muted)}
+.lessons{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.lessons li{padding:18px 0;border-top:1px solid var(--line)}
+.lessons li:first-child{border-top:0;padding-top:0}
+.lessons b{display:block;font-family:var(--head);font-size:21px;letter-spacing:-0.025em;margin-bottom:4px;line-height:1.25}
+.lessons span{color:var(--muted);font-size:16.5px}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:72px}
+@media(max-width:700px){.next{grid-template-columns:1fr}}
+.next a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 26px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.next a:hover{border-color:var(--accent);transform:translateY(-3px)}
+.next small{color:var(--muted);font-weight:600;font-size:13px}
+.next b{display:block;font-family:var(--head);font-size:21px;letter-spacing:-0.025em;margin-top:4px}
+.endcta{margin-top:56px;padding-bottom:0}
+/* ResolveAI console */
+.app{background:var(--surface);border-radius:18px;border:1px solid var(--line);overflow:hidden;margin:14px 0;box-shadow:0 20px 50px rgba(15,23,42,.1)}
+.app-bar{display:flex;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--line);background:var(--bg);font-size:13px;color:var(--muted)}
+.app-bar b{color:var(--ink);font-family:var(--head)}
+.app-body{display:grid;grid-template-columns:minmax(240px,320px) 1fr}
+@media(max-width:860px){.app-body{grid-template-columns:1fr}}
+.pane{padding:22px}
+.pane.left{border-right:1px solid var(--line)}
+@media(max-width:860px){.pane.left{border-right:0;border-bottom:1px solid var(--line)}}
+label.lbl{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.field{border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:var(--bg);font-size:15px;margin-bottom:16px;line-height:1.5}
+.field.m{color:var(--muted)}
+.run{width:100%}
+.note{font-size:13px;color:var(--muted);margin:12px 0 0;line-height:1.5}
+.steps{list-style:none;margin:0;padding:0}
+.step{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);opacity:.4;transition:opacity .25s}
+.step:last-child{border-bottom:0}
+.step.active,.step.done{opacity:1}
+.ic{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);margin-top:2px;display:grid;place-items:center;font-size:12px;font-weight:800;color:var(--accent-ink)}
+.step.active .ic{border-color:var(--accent);border-top-color:transparent;animation:spin .8s linear infinite}
+.step.done .ic{background:var(--accent);border-color:var(--accent)}
+.step.done .ic::after{content:"\2713"}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.step.active .ic{animation:none}}
+.step b{display:block;font-size:15px}
+.step span{font-size:14px;color:var(--muted)}
+.result{display:none;margin-top:20px;padding-top:20px;border-top:2px solid var(--ink)}
+.result.show{display:block}
+@media (prefers-reduced-motion:no-preference){.result.show{animation:rise .5s ease both}}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:560px){.chips{grid-template-columns:1fr}}
+.chip{border-radius:12px;padding:11px 14px}
+.chip span{display:block;font-size:12.5px;font-weight:600;opacity:.85}
+.chip b{font-size:16px;font-family:var(--head)}
+.chip.amber{background:var(--amber-bg);color:var(--amber)}
+.chip.red{background:var(--red-bg);color:var(--red)}
+.chip.grey{background:var(--grey-bg);color:var(--grey)}
+.evi{display:grid;grid-template-columns:repeat(2,1fr);margin-top:12px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.evi div{padding:11px 14px;border-bottom:1px solid var(--line);font-size:14px}
+.evi div:nth-child(odd){border-right:1px solid var(--line)}
+.evi div:nth-last-child(-n+2){border-bottom:0}
+.evi span{display:block;color:var(--muted);font-size:12.5px}
+.evi b{font-weight:600}
+.rec{margin-top:12px;padding:14px 16px;border-radius:12px;background:var(--accent-soft);font-size:15px;line-height:1.55}
+.rec b{display:block;margin-bottom:3px}
+.guard{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:700;padding:4px 11px;border-radius:999px;background:var(--green-bg);color:var(--green)}
+.statuses{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+@media(max-width:760px){.statuses{grid-template-columns:1fr}}
+.sx{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--surface)}
+.sx.cur{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.sx h4{font-size:14.5px;letter-spacing:0;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-family:var(--body);font-weight:700}
+.sx .here{font-size:11.5px;padding:2px 9px;border-radius:999px;background:var(--amber-bg);color:var(--amber)}
+.sx p{font-size:14.5px;color:var(--muted);margin-bottom:8px;line-height:1.5}
+.sx p b{color:var(--ink)}
+.arch{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin:14px 0}
+.node{flex:1 1 150px;border:1px solid var(--line);border-radius:14px;padding:15px 16px;background:var(--surface);font-size:15px;line-height:1.4}
+.node b{display:block;font-size:15.5px}
+.node small{color:var(--muted);font-size:13px}
+.node.core{background:var(--night);color:var(--night-ink);border-color:var(--night)}
+.node.core small{color:var(--night-muted)}
+.story{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);margin:10px 0}
+.story div{padding:20px;border-right:1px solid var(--line);font-size:15px;line-height:1.5}
+.story div:last-child{border-right:0;background:var(--accent-soft)}
+.story b{display:block;font-size:12.5px;color:var(--accent);margin-bottom:6px}
+@media(max-width:860px){.story{grid-template-columns:1fr 1fr}.story div{border-bottom:1px solid var(--line)}}
+@media(max-width:520px){.story{grid-template-columns:1fr}.story div{border-right:0}}
+.tbl{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);margin:10px 0}
+.tr{display:grid;grid-template-columns:1.1fr 1.6fr auto;gap:16px;padding:15px 20px;border-top:1px solid var(--line);align-items:center;font-size:15.5px}
+.tr:first-child{border-top:0}
+.tr.h{background:var(--bg);font-size:12.5px;font-weight:700;color:var(--muted)}
+.tr .pill2{font-size:12.5px;font-weight:700;padding:4px 11px;border-radius:999px;background:var(--grey-bg);color:var(--grey);white-space:nowrap}
+@media(max-width:700px){.tr{grid-template-columns:1fr;gap:4px}.tr.h{display:none}}
+
+#card-faceauth .viz{view-transition-name:viz-faceauth}#cs-viz-faceauth{view-transition-name:viz-faceauth}
+#card-o2o .viz{view-transition-name:viz-o2o}#cs-viz-o2o{view-transition-name:viz-o2o}
+#card-myleads .viz{view-transition-name:viz-myleads}#cs-viz-myleads{view-transition-name:viz-myleads}
+#card-resolveai .viz{view-transition-name:viz-resolveai}#cs-viz-resolveai{view-transition-name:viz-resolveai}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mono">AS</span>Apurwa Sawarkar</a>
+    <ul>
+      <li class="hide-s"><a href="#work">Case studies</a></li>
+      <li class="hide-s"><a href="#bring">Strengths</a></li>
+      <li class="hide-s"><a href="#experience">Experience</a></li>
+      <li class="hide-s"><a href="#about">About</a></li>
+      <li><a class="pill" href="https://linkedin.com/in/apurwa-sawarkar-6806a213b/" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HOME ================= -->
+<div id="home">
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="open"><i></i>Open to growth and GenAI product roles</div>
+      <h1>I take products from <em>launch to scale.</em></h1>
+      <p class="sub">Product manager who scaled a digital savings-account journey from 0 to 4.5k accounts a month, and who now builds GenAI products end to end.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my case studies</a>
+        <a class="btn ghost" href="https://linkedin.com/in/apurwa-sawarkar-6806a213b/" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn ghost" data-link="resume" href="#" hidden>Download resume</a>
+      </div>
+      <div class="facts"><span>IIM Kashipur MBA</span><span>Engineering gold medallist</span><span>Shipped an AI product</span></div>
+    </div>
+    <div class="tl" aria-label="The 30-second version">
+      <div class="cap">The 30-second version. Tap a result to read the story.</div>
+      <a href="#/faceauth"><div class="n">0 &rarr; 4.5k</div><div class="d"><b>accounts a month</b>Face authentication KYC launch</div><span class="ar" aria-hidden="true">&rarr;</span></a>
+      <a href="#/faceauth"><div class="n">1 day &rarr; 30 min</div><div class="d"><b>to activate an account</b>Faster, with no extra audit step</div><span class="ar" aria-hidden="true">&rarr;</span></a>
+      <a href="#/o2o"><div class="n">1.3L+ &rarr; 9k+</div><div class="d"><b>dormant leads into accounts</b>Online-to-offline conversion, a month</div><span class="ar" aria-hidden="true">&rarr;</span></a>
+      <a href="#/resolveai"><div class="n">GenAI</div><div class="d"><b>ResolveAI, deployed</b>An AI copilot I built end to end</div><span class="ar" aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- WORK -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Case studies</h2>
+      <p>Four products, each with the problem, the decisions and the results. Open any one.</p>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Filter case studies">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="growth" aria-pressed="false">Growth</button>
+      <button type="button" data-f="genai" aria-pressed="false">GenAI</button>
+    </div>
+    <div class="cards">
+
+      <a class="card reveal" data-cat="growth" id="card-faceauth" href="#/faceauth">
+        <div class="cv dark viz"><div class="big0"><div class="num">0 &rarr; 4.5k</div><div class="lab">accounts a month</div><div class="rail"></div></div></div>
+        <div class="tx">
+          <span class="tag">Growth launch</span>
+          <h3>Face authentication KYC</h3>
+          <p>A faster identity check for digital savings accounts that cut activation from about a day to about 30 minutes.</p>
+          <div class="res">0 to 4.5k incremental accounts a month</div>
+          <span class="go">Read the case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" data-cat="growth" id="card-o2o" href="#/o2o">
+        <div class="cv viz"><div class="phone sm" aria-hidden="true"><div class="screen"><span class="notch"></span>
+          <div class="pg"><i style="width:33%"></i></div>
+          <div class="sc on"><small>Find</small><h5>Unconverted leads</h5>
+            <div class="ld"><span class="av">AS</span><div><b>Aarav Shah</b><span>Savings account</span></div></div>
+            <div class="ld"><span class="av">MI</span><div><b>Meera Iyer</b><span>Savings account</span></div></div>
+            <div class="ld"><span class="av">KR</span><div><b>Kabir Rao</b><span>Savings account</span></div></div>
+          </div>
+          <div class="pcta">Open lead</div></div></div></div>
+        <div class="tx">
+          <span class="tag">Growth</span>
+          <h3>Online-to-offline conversion</h3>
+          <p>An API-integrated journey that hands dormant digital leads to the teams who can finish the job.</p>
+          <div class="res">1.3L+ leads to 9k+ accounts a month</div>
+          <span class="go">Read the case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" data-cat="genai" id="card-resolveai" href="#/resolveai">
+        <div class="cv viz"><div class="win" aria-hidden="true">
+          <div class="bar"><b>ResolveAI</b><span>case investigation</span></div>
+          <div class="in">
+            <div class="ln"><i>&#10003;</i>Read the complaint</div>
+            <div class="ln"><i>&#10003;</i>Found the transaction</div>
+            <div class="ln"><i>&#10003;</i>Retrieved the policy</div>
+            <div class="chips2"><b class="c-am">AGENT_REVIEW</b><b class="c-rd">RISK HIGH</b><b class="c-gy">NO ESCALATION</b></div>
+          </div></div></div>
+        <div class="tx">
+          <span class="tag blue">GenAI build</span>
+          <h3>ResolveAI</h3>
+          <p>An AI copilot that investigates a customer complaint and tells the agent what to do next, without inventing outcomes.</p>
+          <div class="res">Built and deployed end to end</div>
+          <span class="go">Read the case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" data-cat="growth" id="card-myleads" href="#/myleads">
+        <div class="cv viz"><div class="phone sm" aria-hidden="true"><div class="screen"><span class="notch"></span>
+          <div class="sc on" style="top:40px"><small>My Leads (5)</small>
+            <div class="ld"><span class="av">AS</span><div><b>Aarav Shah</b></div><span class="st c-bl">Active</span></div>
+            <div class="ld"><span class="av">MI</span><div><b>Meera Iyer</b></div><span class="st c-gr">Done</span></div>
+            <div class="ld"><span class="av">KR</span><div><b>Kabir Rao</b></div><span class="st c-am">Expired</span></div>
+            <div class="ld"><span class="av">NP</span><div><b>Nisha Pai</b></div><span class="st c-gy">No</span></div>
+          </div></div></div></div>
+        <div class="tx">
+          <span class="tag amber">Short case study</span>
+          <h3>My Leads dashboard</h3>
+          <p>One place for the sales team to see every lead, its status, and what to do next.</p>
+          <div class="res">Live. One view of every lead.</div>
+          <span class="go">Read the case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+    </div>
+    <div class="soon reveal"><b>More case studies on the way</b><span>Each one is shipped, measured and written up.</span></div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="sec" id="bring">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>What I bring</h2><p>The thread through all of this: find the step where people get stuck, fix it, and measure it.</p></div>
+    <div class="three reveal">
+      <div class="tile"><div class="ic">G</div><h3>Growth that compounds</h3><p>Activation speed, funnel fixes and referral loops that lifted lead volume by 35% and brought in &#8377;12.5L+ revenue.</p></div>
+      <div class="tile"><div class="ic">P</div><h3>Launch to adoption</h3><p>I own the whole arc: the problem, the solution, the launch communication and the scale-up, across product, tech, design, risk and compliance.</p></div>
+      <div class="tile"><div class="ic">AI</div><h3>GenAI builder</h3><p>I take AI ideas to deployed products by directing AI tools, then test the behaviour and write down what is missing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="sec" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Experience</h2><p>Open a role to see what I did and what it moved.</p></div>
+    <div class="xp reveal">
+      <details open>
+        <summary><span class="when">May 2024 to present</span><div><div class="co">Axis Bank</div><div class="role">Product Manager, digital accounts</div></div><span class="ico"></span></summary>
+        <div class="body"><ul>
+          <li>Launched face authentication KYC for digital savings accounts, scaling it from 0 to 4.5k incremental accounts a month and cutting activation from about a day to about 30 minutes.</li>
+          <li>Led an API-integrated online-to-offline initiative converting 1.3L+ dormant leads a month into 9k+ high-value accounts.</li>
+          <li>Raised lead conversion by 4% and lead volume by 35% through helper nudges and a single call to action.</li>
+          <li>Launched a referral journey that produced 100+ digital accounts and &#8377;12.5L+ revenue, with 2x higher MDAB.</li>
+          <li>Shipped a lead-tracking dashboard so sales teams can see every lead and its status in one place.</li>
+          <li>Worked across product, tech, design, risk and compliance. Recognised with the Q1 FY26 DBAT Applause (2025).</li>
+        </ul></div>
+      </details>
+      <details>
+        <summary><span class="when">Apr to Jun 2023</span><div><div class="co">MathCo</div><div class="role">Management consultant (intern)</div></div><span class="ico"></span></summary>
+        <div class="body"><ul>
+          <li>Benchmarked 22+ healthcare analytics product suites and 70+ case studies, identifying a $20M+ revenue opportunity in Generative AI use cases.</li>
+          <li>Synthesised 25+ stakeholder interviews and 35+ internal projects into the client's capability storefront.</li>
+          <li>Ran NLP text and sentiment analysis on three competitors' social channels to inform strategy.</li>
+        </ul></div>
+      </details>
+      <details>
+        <summary><span class="when">Apr to Jun 2022</span><div><div class="co">Relevel by Unacademy</div><div class="role">Category manager</div></div><span class="ico"></span></summary>
+        <div class="body"><ul>
+          <li>Launched 3 new test verticals in 60 days, working with 15+ consultants, 40+ vendors and a team of five.</li>
+          <li>Lifted the Mechanical Engineering test qualification rate from 0% to 2.95% through UX, content and data-driven changes.</li>
+        </ul></div>
+      </details>
+      <details>
+        <summary><span class="when">Apr 2021 to Mar 2022</span><div><div class="co">Vedantu</div><div class="role">Program associate</div></div><span class="ico"></span></summary>
+        <div class="body"><ul>
+          <li>Introduced SOPs and tracking dashboards, raising test adoption by 15.9% and assignment engagement by 13.4%.</li>
+          <li>Used voice-of-customer analysis to lift NPS from 5 to 8 within two quarters.</li>
+          <li>Designed competency-based training for 50+ educators, improving content delivery by 23.5%.</li>
+        </ul></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>About me</h2></div>
+    <div class="about reveal">
+      <div>
+        <p>I started in electrical engineering, spent time in edtech operations and category work, then did an MBA in business analytics at IIM Kashipur. Since then I have owned digital journeys where small product changes add up to real growth.</p>
+        <p>I care about products that are fast, safe and measurable. GenAI makes that harder and more interesting, so I learn it by building. I direct AI coding tools, review the architecture, test the behaviour and decide what ships.</p>
+        <div class="skills">
+          <h4>Product and growth</h4>
+          <ul class="chipset"><li>Roadmap and prioritisation</li><li>Funnel optimisation</li><li>Digital onboarding</li><li>Customer journeys</li><li>Go-to-market</li><li>Agile and Scrum</li><li>Stakeholder management</li></ul>
+          <h4>Data and AI</h4>
+          <ul class="chipset"><li>SQL</li><li>Python</li><li>Tableau</li><li>Power BI</li><li>LLM-powered workflows</li><li>AI-assisted app deployment</li></ul>
+          <h4>Tools</h4>
+          <ul class="chipset"><li>Jira</li><li>Confluence</li><li>Figma</li><li>Excel</li><li>monday.com</li></ul>
+        </div>
+      </div>
+      <ul class="flist">
+        <li><b>MBA, Business Analytics</b><span>IIM Kashipur, 2022 to 2024. Need-cum-merit scholarship, given to 4.33% of the batch</span></li>
+        <li><b>BE, Electrical Engineering</b><span>GH Raisoni College of Engineering. Gold medallist, 9.89 CGPA</span></li>
+        <li><b>Recognition</b><span>Q1 FY26 DBAT Applause. Winner, Fujitsu 100 Best Future Managers. National semi-finalist, TATA Steel-a-thon (top 1%). National finalist, Technalytics at IIT BHU</span></li>
+        <li><b>Certifications</b><span>Agile with Atlassian Jira. Foundations of Google Data Analytics. Tableau</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <h2>Hiring for growth or GenAI product? Let us talk.</h2>
+    <p>I would like to hear what you are building and where you are stuck.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://linkedin.com/in/apurwa-sawarkar-6806a213b/" rel="noopener">Message me on LinkedIn</a>
+      <a class="btn ghost" href="#work">Browse the case studies</a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /home -->
+
+<!-- ================= CASE: FACE AUTH ================= -->
+<div id="case-faceauth" class="caseview" hidden>
+<div class="wrap">
+  <a class="crumb" href="#work">&larr; All case studies</a>
+  <div class="chead">
+    <div>
+      <span class="tag">Growth launch</span>
+      <h1>Face authentication KYC: from a day to half an hour</h1>
+      <p class="lede">I launched face authentication as a faster alternative to video KYC for digital savings accounts, then scaled it from 0 to 4.5k incremental accounts a month.</p>
+    </div>
+    <div class="cviz" id="cs-viz-faceauth" aria-hidden="true">
+      <div class="phone"><div class="screen"><span class="notch"></span>
+        <div class="pg"><i style="width:85%"></i></div>
+        <div class="sc on" style="text-align:center"><small>Last step</small><h5>Verify with your face</h5>
+          <div class="scan"><span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span><span class="line"></span>
+            <svg viewBox="0 0 100 120" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--muted)"><ellipse cx="50" cy="52" rx="28" ry="36"/><path d="M10 118c4-22 22-30 40-30s36 8 40 30"/><circle cx="39" cy="46" r="2.5" fill="currentColor"/><circle cx="61" cy="46" r="2.5" fill="currentColor"/><path d="M42 68c5 5 11 5 16 0"/></svg></div>
+          <div class="verified">&#10003; Identity verified</div>
+        </div>
+        <div class="pcta done" style="background:var(--green);color:#fff">Account active</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="glance">
+    <div><span>My role</span><b>Product Manager, growth</b></div>
+    <div><span>Stage</span><b>0 to 1 launch, then scale</b></div>
+    <div><span>Metrics</span><b>Accounts a month, time to activation</b></div>
+    <div><span>Result</span><b>0 to 4.5k accounts a month</b></div>
+  </div>
+
+  <div class="cs-sec"><div class="cs-k">01<b>Context</b></div><div class="cs-c">
+    <p>Opening a digital savings account needs a reliable identity check. The existing route used video KYC (VKYC), followed by a concurrent audit step before the account went live.</p>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">02<b>Problem</b></div><div class="cs-c">
+    <p>Customers finished the application and then waited. Activation took about a day. Every hour of waiting is a chance for the customer to drift away, and for the teams opening accounts it made conversion slower and less predictable.</p>
+    <div class="callout"><span>The real problem</span>The slowest part of the journey came after the customer had already done everything we asked.</div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">03<b>Goal and metrics</b></div><div class="cs-c">
+    <div class="mt">
+      <div class="r"><b>Primary</b><span>Incremental accounts opened a month through the new route</span></div>
+      <div class="r"><b>Speed</b><span>Time from application to an active account</span></div>
+      <div class="r"><b>Guardrail</b><span>Verification stays secure while the journey gets faster</span></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">04<b>Insight and solution</b></div><div class="cs-c">
+    <h3>Insight</h3>
+    <p>If the customer's face can serve as the identity check, the account can activate in one sitting, and the audit step no longer has to run alongside it.</p>
+    <h3>Solution</h3>
+    <p>Face authentication as the smarter alternative to VKYC, with no concurrent audit leg. The journey stays short and fully digital:</p>
+    <ol class="flow">
+      <li>Start in the sales app</li><li>Open the lead</li><li>Choose the product</li><li>Customer identification (VCIP)</li><li>Complete the customer profile</li><li>Request face authentication</li>
+    </ol>
+    <div class="ba" role="img" aria-label="Time to activation before and after">
+      <div class="row"><div class="lab">Before: VKYC plus concurrent audit<span>About a day</span></div><div class="track"><div class="fill b"></div></div></div>
+      <div class="row"><div class="lab">After: face authentication<span>About 30 minutes</span></div><div class="track"><div class="fill a"></div></div></div>
+      <div class="note">Illustrative, roughly to scale.</div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">05<b>Launch and adoption</b></div><div class="cs-c">
+    <p>Adoption is a product problem and a communication problem. I launched with an enablement EDM that explained the journey in six steps and framed face authentication as the smarter alternative to VKYC.</p>
+    <p class="m">The message was deliberately simple: the same account, far faster, and nothing extra to do.</p>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">06<b>Results</b></div><div class="cs-c">
+    <div class="stats">
+      <div class="stat"><div class="n">0 &rarr; 4.5k</div><div class="d">incremental accounts a month</div></div>
+      <div class="stat"><div class="n">~1 day &rarr; ~30 min</div><div class="d">time to activate an account</div></div>
+      <div class="stat"><div class="n">0</div><div class="d">concurrent audit legs holding the customer up</div></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">07<b>What I learned</b></div><div class="cs-c">
+    <ul class="lessons">
+      <li><b>Speed is a growth lever, not just a nicer experience.</b><span>Shortening the wait after the application did more for volume than adding anything before it.</span></li>
+      <li><b>Remove steps, do not just speed them up.</b><span>Taking the concurrent audit leg out of the customer's path was the bigger win.</span></li>
+      <li><b>Launch communication is part of the product.</b><span>A clear, six-step EDM did the enablement work a long manual could not.</span></li>
+    </ul>
+  </div></div>
+
+  <div class="next">
+    <a href="#/o2o"><small>Next case study</small><b>Online-to-offline conversion</b></a>
+    <a href="#/myleads"><small>Related</small><b>My Leads dashboard</b></a>
+  </div>
+</div>
+</div>
+
+<!-- ================= CASE: O2O ================= -->
+<div id="case-o2o" class="caseview" hidden>
+<div class="wrap">
+  <a class="crumb" href="#work">&larr; All case studies</a>
+  <div class="chead">
+    <div>
+      <span class="tag">Growth</span>
+      <h1>Online-to-offline: turning dormant leads into accounts</h1>
+      <p class="lede">An API-integrated initiative that hands dormant digital leads to the teams who can finish the job, converting 1.3L+ leads a month into 9k+ high-value accounts.</p>
+    </div>
+    <div class="cviz" id="cs-viz-o2o">
+      <div>
+        <div class="phone" id="phone" style="margin:0 auto" aria-label="Illustrative mock-up of the lead journey"><div class="screen"><span class="notch"></span>
+          <div class="pg"><i id="pgfill"></i></div>
+          <div class="sc on"><small>Find</small><h5>Unconverted leads</h5>
+            <div class="ld"><span class="av">AS</span><div><b>Aarav Shah</b><span>Savings account</span></div></div>
+            <div class="ld"><span class="av">MI</span><div><b>Meera Iyer</b><span>Savings account</span></div></div>
+            <div class="ld"><span class="av">KR</span><div><b>Kabir Rao</b><span>Savings account</span></div></div>
+          </div>
+          <div class="sc"><small>Connect</small><h5>Aarav Shah</h5><p>Review the contact details, call, then send the account-opening link.</p>
+            <div class="row2"><span>Phone</span><b>98&bull;&bull;&bull;&bull; &bull;&bull;12</b></div>
+            <div class="row2"><span>Product</span><b>Savings account</b></div>
+          </div>
+          <div class="sc"><small>Convert</small><div class="tick">&#10003;</div><h5>Link sent</h5><p>Help the customer finish. Track progress until the account is active.</p></div>
+          <div class="pcta" id="pcta">Open lead</div>
+        </div></div>
+        <div class="tabs" role="group" aria-label="Journey steps">
+          <button type="button" data-i="0" aria-pressed="true">Find</button>
+          <button type="button" data-i="1" aria-pressed="false">Connect</button>
+          <button type="button" data-i="2" aria-pressed="false">Convert</button>
+        </div>
+        <p class="capt">Illustrative re-creation with sample data, not production screens.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="glance">
+    <div><span>My role</span><b>Product Manager, owned the initiative</b></div>
+    <div><span>Worked with</span><b>Product, tech, design, risk, compliance</b></div>
+    <div><span>Scale</span><b>1.3L+ dormant leads a month</b></div>
+    <div><span>Result</span><b>9k+ high-value accounts</b></div>
+  </div>
+
+  <div class="cs-sec"><div class="cs-k">01<b>Context</b></div><div class="cs-c">
+    <p>Every month, a large pool of people started opening a digital savings account and went quiet. These dormant leads had already shown intent, which made them the cheapest growth available.</p>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">02<b>Problem</b></div><div class="cs-c">
+    <p>About 1.3L+ leads a month sat idle. The interest was there. What was missing was a simple way for a person to pick up a lead, reach the customer, and help them finish.</p>
+    <div class="callout"><span>The real problem</span>Intent existed, but nobody owned the last mile between a stalled application and an open account.</div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">03<b>Solution</b></div><div class="cs-c">
+    <p>Leads flow in through APIs and appear in a lead app for the people who can convert them. The workflow is three steps:</p>
+    <ol class="flow"><li>Find: check unconverted leads</li><li>Connect: open the lead and view contact details</li><li>Convert: send the link and help the customer finish</li></ol>
+    <h3>Design choices</h3>
+    <div class="cols2">
+      <div class="pc"><h4>A time-boxed lead window</h4><p>Leads stay available for a limited time, so follow-up happens while intent is still fresh.</p><p class="t"><b>Trade-off.</b> Some leads expire before anyone reaches them.</p></div>
+      <div class="pc"><h4>Five clear actions</h4><p>Call, send link, support the customer, save for later, or mark not interested with a reason.</p><p class="t"><b>Trade-off.</b> Fewer options, so reasons are captured consistently.</p></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">04<b>Growth experiments alongside</b></div><div class="cs-c">
+    <div class="cols2">
+      <div class="pc"><h4>Funnel fixes</h4><p>Helper nudges and a single call to action replaced competing choices.</p><p class="t"><b>Result.</b> +4% lead conversion and +35% lead volume.</p></div>
+      <div class="pc"><h4>Referral journey</h4><p>A referral loop brought in high-quality digital accounts.</p><p class="t"><b>Result.</b> 100+ accounts, &#8377;12.5L+ revenue, 2x higher MDAB.</p></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">05<b>Results</b></div><div class="cs-c">
+    <div class="stats">
+      <div class="stat"><div class="n">1.3L+ &rarr; 9k+</div><div class="d">dormant leads a month into high-value accounts</div></div>
+      <div class="stat"><div class="n">+35%</div><div class="d">lead volume, with conversion up 4%</div></div>
+      <div class="stat"><div class="n">&#8377;12.5L+</div><div class="d">revenue from the referral journey</div></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">06<b>What I learned</b></div><div class="cs-c">
+    <ul class="lessons">
+      <li><b>Dormant leads are a growth source, not a loss.</b><span>Re-engaging people who already showed interest is often the cheapest win.</span></li>
+      <li><b>Own the last mile.</b><span>The gain came from giving someone a clear job and a clear next action.</span></li>
+      <li><b>Regulated products are built with risk and compliance.</b><span>Having them in the pod from the start kept shipping fast and safe.</span></li>
+    </ul>
+  </div></div>
+
+  <div class="next">
+    <a href="#/myleads"><small>Next case study</small><b>My Leads dashboard</b></a>
+    <a href="#/faceauth"><small>Related</small><b>Face authentication KYC</b></a>
+  </div>
+</div>
+</div>
+
+<!-- ================= CASE: MY LEADS ================= -->
+<div id="case-myleads" class="caseview" hidden>
+<div class="wrap">
+  <a class="crumb" href="#work">&larr; All case studies</a>
+  <div class="chead">
+    <div>
+      <span class="tag amber">Short case study</span>
+      <h1>My Leads: one view of every lead</h1>
+      <p class="lede">A dashboard that lets the sales team track every lead they have worked, see its status in real time, and know what to do next.</p>
+    </div>
+    <div class="cviz" id="cs-viz-myleads">
+      <div>
+        <div class="phone" style="margin:0 auto" aria-label="Interactive illustrative My Leads screen"><div class="screen"><span class="notch"></span>
+          <div class="sc on" style="top:42px"><h5 style="font-size:18px">My Leads <span id="mlcount">(5)</span></h5>
+            <div class="search">Search by name or mobile number</div>
+            <div class="fchips" role="group" aria-label="Filter by status">
+              <button type="button" data-s="all" aria-pressed="true">All</button>
+              <button type="button" data-s="active" aria-pressed="false">Active</button>
+              <button type="button" data-s="done" aria-pressed="false">Completed</button>
+              <button type="button" data-s="expired" aria-pressed="false">Expired</button>
+              <button type="button" data-s="no" aria-pressed="false">Not interested</button>
+            </div>
+            <div class="ml-list" id="mllist">
+              <div class="ld" data-s="active"><span class="av">AS</span><div><b>Aarav Shah</b><span>Savings account</span></div><span class="st c-bl">Active</span></div>
+              <div class="ld" data-s="done"><span class="av">MI</span><div><b>Meera Iyer</b><span>Savings account</span></div><span class="st c-gr">Completed</span></div>
+              <div class="ld" data-s="expired"><span class="av">KR</span><div><b>Kabir Rao</b><span>Savings account <span class="resend">Resend</span></span></div><span class="st c-am">Expired</span></div>
+              <div class="ld" data-s="no"><span class="av">NP</span><div><b>Nisha Pai</b><span>Savings account</span></div><span class="st c-gy">Not interested</span></div>
+              <div class="ld" data-s="active"><span class="av">RD</span><div><b>Rohan Das</b><span>Savings account</span></div><span class="st c-bl">Active</span></div>
+            </div>
+          </div>
+        </div></div>
+        <p class="capt">Tap a status to filter. Illustrative re-creation with sample data.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="glance">
+    <div><span>My role</span><b>Product Manager</b></div>
+    <div><span>Users</span><b>Sales teams converting leads</b></div>
+    <div><span>Type</span><b>Tracking and follow-up dashboard</b></div>
+    <div><span>Status</span><b>Live</b></div>
+  </div>
+
+  <div class="cs-sec"><div class="cs-k">01<b>Problem</b></div><div class="cs-c">
+    <p>Once a team member shares an account-opening link, the trail goes cold. Which leads are in progress? Which links expired? Who said no? Without one place to look, follow-ups were guesswork and expired leads were easy to forget.</p>
+    <div class="callout"><span>The real problem</span>Sending the link was tracked. What happened next was not.</div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">02<b>Solution</b></div><div class="cs-c">
+    <ul class="ticks">
+      <li>All leads in one view, searchable by name or mobile number</li>
+      <li>Filters by date, product and status</li>
+      <li>Real-time status, so people act on what matters</li>
+      <li>Expandable lead cards, with the option to resend a link</li>
+      <li>A way to re-engage expired leads and manage not-interested customers</li>
+    </ul>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">03<b>Status model</b></div><div class="cs-c">
+    <p class="m">Each status tells the user what to do next. That was the design rule.</p>
+    <div class="mt">
+      <div class="r"><b><span class="st c-bl">Active</span></b><span>Application in progress. Follow up.</span></div>
+      <div class="r"><b><span class="st c-gr">Completed</span></b><span>Account activated. Nothing to do.</span></div>
+      <div class="r"><b><span class="st c-am">Expired</span></b><span>The link expired. Resend or re-engage.</span></div>
+      <div class="r"><b><span class="st c-gy">Not interested</span></b><span>Link shared, customer did not start. Record the reason.</span></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">04<b>How it fits the funnel</b></div><div class="cs-c">
+    <p>The online-to-offline journey brings leads in and sends links. My Leads closes the loop, so every lead has a visible outcome. Together with face authentication, which made activation fast, it covers the path from lead to active account.</p>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">05<b>What I learned</b></div><div class="cs-c">
+    <ul class="lessons">
+      <li><b>A status is only useful if it says what to do next.</b><span>Four statuses, four clear actions.</span></li>
+      <li><b>Follow-up is part of conversion.</b><span>Tracking after the link is sent matters as much as sending it.</span></li>
+    </ul>
+  </div></div>
+
+  <div class="next">
+    <a href="#/resolveai"><small>Next case study</small><b>ResolveAI</b></a>
+    <a href="#/o2o"><small>Related</small><b>Online-to-offline conversion</b></a>
+  </div>
+</div>
+</div>
+
+<!-- ================= CASE: RESOLVEAI ================= -->
+<div id="case-resolveai" class="caseview" hidden>
+<div class="wrap">
+  <a class="crumb" href="#work">&larr; All case studies</a>
+  <div class="chead">
+    <div>
+      <span class="tag blue">GenAI build. Version 1 live.</span>
+      <h1>ResolveAI: an AI copilot for support agents</h1>
+      <p class="lede">It investigates a customer complaint, gathers the evidence, and tells the agent what to do next, without promising anything the evidence cannot back up. Uses synthetic demo data only.</p>
+      <div class="cta" style="margin-top:22px">
+        <a class="btn primary" data-link="demo" href="#" hidden>Try the live app</a>
+        <a class="btn ghost" data-link="api" href="#" hidden>API documentation</a>
+      </div>
+    </div>
+    <div class="cviz" id="cs-viz-resolveai" aria-hidden="true">
+      <div class="win">
+        <div class="bar"><b>ResolveAI</b><span>case investigation</span></div>
+        <div class="in">
+          <div class="ln"><i>&#10003;</i>Read the complaint</div>
+          <div class="ln"><i>&#10003;</i>Found the transaction</div>
+          <div class="ln"><i>&#10003;</i>Retrieved the policy</div>
+          <div class="chips2"><b class="c-am">AGENT_REVIEW</b><b class="c-rd">RISK HIGH</b><b class="c-gy">NO ESCALATION</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="glance">
+    <div><span>My role</span><b>Product owner and builder</b></div>
+    <div><span>Primary user</span><b>Customer-service agent</b></div>
+    <div><span>Built with</span><b>Next.js, FastAPI, an LLM</b></div>
+    <div><span>How I build</span><b>I direct AI coding tools and test the output</b></div>
+  </div>
+
+  <div class="cs-sec"><div class="cs-k">01<b>Problem</b></div><div class="cs-c">
+    <p>A customer writes that a payment failed but the money left their account. It looks simple and is not. The answer depends on the transaction record, the recipient-side status and the applicable policy. Support goes wrong in two opposite ways: the agent guesses and promises a refund that never arrives, or escalates everything and clogs specialist queues.</p>
+    <div class="callout"><span>What ResolveAI aims for</span>Evidence first, a clear next action, and escalation only when the case needs it.</div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">02<b>Solution</b></div><div class="cs-c">
+    <p class="m">Watch it investigate a real test case on synthetic data: a failed payment where the money was debited.</p>
+    <div class="app" id="app">
+      <div class="app-bar"><b>ResolveAI</b><span>case investigation</span></div>
+      <div class="app-body">
+        <div class="pane left">
+          <label class="lbl">Customer ID</label>
+          <div class="field m">Synthetic demo customer</div>
+          <label class="lbl">What do you need help with?</label>
+          <div class="field">My Amazon UPI payment of &#8377;33,003.69 failed and the money was debited. Please check.</div>
+          <button class="btn primary run" id="run" type="button">Analyze case</button>
+          <p class="note">Customer ID is currently required. Making it optional for general policy questions is the next fix.</p>
+        </div>
+        <div class="pane">
+          <ol class="steps" id="steps">
+            <li class="step"><i class="ic"></i><div><b>Reading the complaint</b><span>Payment failed, money debited</span></div></li>
+            <li class="step"><i class="ic"></i><div><b>Finding the transaction</b><span>Looking up the payment in mock records</span></div></li>
+            <li class="step"><i class="ic"></i><div><b>Retrieving the policy</b><span>UPI guidance for failed transactions</span></div></li>
+            <li class="step"><i class="ic"></i><div><b>Assessing risk and escalation</b><span>Two separate signals</span></div></li>
+            <li class="step"><i class="ic"></i><div><b>Drafting the recommendation</b><span>Only what the evidence supports</span></div></li>
+          </ol>
+          <div class="result" id="result" aria-live="polite">
+            <div class="chips">
+              <div class="chip amber"><span>Status</span><b>AGENT_REVIEW</b></div>
+              <div class="chip red"><span>Risk</span><b>HIGH</b></div>
+              <div class="chip grey"><span>Escalation</span><b>NO ESCALATION</b></div>
+            </div>
+            <div class="evi">
+              <div><span>Amount</span><b>&#8377;33,003.69</b></div>
+              <div><span>Merchant</span><b>Amazon</b></div>
+              <div><span>Payment status</span><b>FAILED</b></div>
+              <div><span>Beneficiary credited</span><b>False</b></div>
+            </div>
+            <div class="rec"><b>Recommendation to the agent</b>Verify the recipient-side status and payment-system evidence before advising the customer. Do not say a refund or reversal is under way, because the evidence does not show one.</div>
+            <span class="guard">Guardrail: no promised refund</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="statuses">
+      <div class="sx"><h4>RESOLVED</h4><p><b>Meaning.</b> Evidence and policy support a clear outcome.</p><p><b>Agent does.</b> Records the outcome and closes the case.</p></div>
+      <div class="sx cur"><h4>AGENT_REVIEW <span class="here">This case</span></h4><p><b>Meaning.</b> The AI investigated, but a human must verify or decide.</p><p><b>Agent does.</b> Reviews evidence, then resolves or escalates.</p></div>
+      <div class="sx"><h4>ESCALATE</h4><p><b>Meaning.</b> Suspected fraud, serious risk, or a policy exception.</p><p><b>Agent does.</b> Routes to a specialist team with the evidence.</p></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">03<b>Architecture</b></div><div class="cs-c">
+    <div class="arch">
+      <div class="node"><b>Complaint</b><small>Free text, demo customer ID</small></div>
+      <div class="node"><b>Frontend</b><small>Next.js on Vercel</small></div>
+      <div class="node core"><b>Backend API</b><small>FastAPI on Render</small></div>
+      <div class="node"><b>Evidence</b><small>Policy retrieval, mock banking tools</small></div>
+      <div class="node"><b>LLM reasoning</b><small>Status, risk, recommendation</small></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">04<b>Product decisions</b></div><div class="cs-c">
+    <div class="cols2">
+      <div class="pc"><h4>Statuses that change what the agent does</h4><p>Each of the three asks for a different action. A status that changes nothing is only a label.</p><p class="t"><b>Trade-off.</b> More routing logic to build and test.</p></div>
+      <div class="pc"><h4>Risk and escalation are separate</h4><p>High risk does not automatically mean escalate. Escalation depends on policy and findings.</p><p class="t"><b>Trade-off.</b> The interface must explain two signals.</p></div>
+      <div class="pc"><h4>The AI never invents an outcome</h4><p>A promised refund that never arrives is worse than a slower answer.</p><p class="t"><b>Trade-off.</b> Some answers are more cautious than customers like.</p></div>
+      <div class="pc"><h4>Customer ID only when needed</h4><p>General policy questions should not require account data. This fix is in progress.</p><p class="t"><b>Trade-off.</b> The system must first classify the question.</p></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">05<b>The bug that taught me most</b></div><div class="cs-c">
+    <div class="story">
+      <div><b>Symptom</b>The live frontend showed a CORS error and never returned a result.</div>
+      <div><b>Cause</b>Frontend and backend sit on different hosts, and the API had not allowed the frontend's address.</div>
+      <div><b>Fix</b>I updated the backend's allowed origins, redeployed and re-ran the case.</div>
+      <div><b>Lesson</b>Working locally is not working deployed. Test the real path.</div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">06<b>Where it stands</b></div><div class="cs-c">
+    <div class="cols2">
+      <div class="pc"><h4>Built and deployed</h4><ul class="ticks"><li>Live frontend and backend</li><li>Structured investigation output</li><li>Policy retrieval and mock evidence</li><li>Refund guardrail</li></ul></div>
+      <div class="pc"><h4>Not built yet</h4><ul class="ticks todo"><li>Saved cases and audit trail</li><li>Real routing, closure, refunds</li><li>An evaluation suite</li><li>Access controls</li></ul></div>
+    </div>
+    <h3>Next: prove it works reliably</h3>
+    <div class="tbl" role="table" aria-label="Test plan">
+      <div class="tr h" role="row"><div>Scenario</div><div>What I verify</div><div>Result</div></div>
+      <div class="tr" role="row"><b>Failed payment, amount debited</b><div>Correct evidence and safe guidance</div><span class="pill2">Not run yet</span></div>
+      <div class="tr" role="row"><b>Refund status question</b><div>Correct lookup, no invented status</div><span class="pill2">Not run yet</span></div>
+      <div class="tr" role="row"><b>MPIN policy question</b><div>Relevant answer, no needless tool calls</div><span class="pill2">Not run yet</span></div>
+      <div class="tr" role="row"><b>Suspected fraud</b><div>Right risk and escalation behaviour</div><span class="pill2">Not run yet</span></div>
+    </div>
+  </div></div>
+
+  <div class="cs-sec"><div class="cs-k">07<b>What I learned</b></div><div class="cs-c">
+    <ul class="lessons">
+      <li><b>Define a status by what the human does next.</b><span>If two statuses lead to the same action, they are one status.</span></li>
+      <li><b>A prototype is not a product.</b><span>Labelling a case is different from saving, routing and auditing it.</span></li>
+      <li><b>Product judgment matters more when AI writes the code.</b><span>I decide the problem, review the architecture, test the behaviour and choose what ships.</span></li>
+    </ul>
+  </div></div>
+
+  <div class="next">
+    <a href="#/faceauth"><small>Back to the start</small><b>Face authentication KYC</b></a>
+    <a href="#work"><small>See everything</small><b>All case studies</b></a>
+  </div>
+</div>
+</div>
+
+<!-- shared close for case studies -->
+<section class="contact" id="contact-end" hidden style="margin-top:96px">
+  <div class="wrap">
+    <h2>Want the full story behind the numbers?</h2>
+    <p>I am happy to walk through the decisions, the trade-offs and what I would do differently.</p>
+    <div class="cta"><a class="btn primary" href="https://linkedin.com/in/apurwa-sawarkar-6806a213b/" rel="noopener">Message me on LinkedIn</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">&copy; 2026 Apurwa Sawarkar. Figures come from my own work. Product screens are illustrative re-creations with sample data. ResolveAI is a prototype that uses synthetic data.</div></footer>
+
+<script>
+// Fill these in and the matching buttons appear. Empty values stay hidden.
+const LINKS = {
+  demo: "",    // ResolveAI frontend (Vercel) URL
+  api: "",     // ResolveAI backend (Render) API docs URL
+  resume: ""   // link to your resume PDF
+};
+document.querySelectorAll("[data-link]").forEach(el=>{
+  const href = LINKS[el.dataset.link];
+  if(href){ el.href = href; el.hidden = false; el.target = "_blank"; el.rel = "noopener"; }
+});
+
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const home = document.getElementById("home");
+const endBand = document.getElementById("contact-end");
+const VIEWS = {"#/faceauth":"case-faceauth","#/o2o":"case-o2o","#/myleads":"case-myleads","#/resolveai":"case-resolveai"};
+let current = "home";
+
+/* scroll reveal */
+const revealIO = "IntersectionObserver" in window ? new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); revealIO.unobserve(e.target);} });
+},{threshold:0.1}) : null;
+function watchReveals(root){ root.querySelectorAll(".reveal:not(.in)").forEach(el=>{ revealIO ? revealIO.observe(el) : el.classList.add("in"); }); }
+watchReveals(document);
+
+/* progress bar */
+const bar = document.getElementById("progress");
+function prog(){ const h=document.documentElement, max=h.scrollHeight-h.clientHeight; bar.style.width=(max>0?(h.scrollTop/max)*100:0)+"%"; }
+window.addEventListener("scroll",prog,{passive:true});
+
+/* case study filter */
+const fbtns = document.querySelectorAll(".filters button");
+fbtns.forEach(b=>b.addEventListener("click",()=>{
+  fbtns.forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  document.querySelectorAll(".card").forEach(c=>c.classList.toggle("off", b.dataset.f!=="all" && c.dataset.cat!==b.dataset.f));
+}));
+
+/* ResolveAI console replay */
+const steps = Array.from(document.querySelectorAll("#steps .step"));
+const result = document.getElementById("result");
+const runBtn = document.getElementById("run");
+let running=false, timers=[], io=null;
+function resetConsole(){ timers.forEach(clearTimeout); timers=[]; running=false; steps.forEach(s=>s.className="step"); result.classList.remove("show"); runBtn.disabled=false; runBtn.textContent="Analyze case"; }
+function play(){
+  if(running) return;
+  resetConsole(); running=true; runBtn.textContent="Analyzing..."; runBtn.disabled=true;
+  const gap = reduce ? 0 : 750;
+  steps.forEach((s,i)=>{
+    timers.push(setTimeout(()=>s.classList.add("active"), i*gap));
+    timers.push(setTimeout(()=>{ s.classList.remove("active"); s.classList.add("done"); }, i*gap+(reduce?0:650)));
+  });
+  timers.push(setTimeout(()=>{ result.classList.add("show"); running=false; runBtn.disabled=false; runBtn.textContent="Replay"; }, steps.length*gap+(reduce?0:100)));
+}
+runBtn.addEventListener("click", play);
+
+/* O2O phone */
+const phone = document.getElementById("phone");
+const screens = Array.from(phone.querySelectorAll(".sc"));
+const tabs = Array.from(document.querySelectorAll("#cs-viz-o2o .tabs button"));
+const pgfill = document.getElementById("pgfill");
+const pcta = document.getElementById("pcta");
+const PCT=["33%","66%","100%"], CTA=["Open lead","Send link","Track in My Leads"];
+let ps=0, ptimer=null;
+function setPhone(i){ ps=i; screens.forEach((s,k)=>s.classList.toggle("on",k===i)); tabs.forEach((t,k)=>t.setAttribute("aria-pressed",String(k===i))); pgfill.style.width=PCT[i]; pcta.textContent=CTA[i]; }
+function stopPhone(){ clearInterval(ptimer); ptimer=null; }
+function startPhone(){ stopPhone(); setPhone(0); if(!reduce) ptimer=setInterval(()=>setPhone((ps+1)%3),3200); }
+tabs.forEach(t=>t.addEventListener("click",()=>{ stopPhone(); setPhone(Number(t.dataset.i)); }));
+
+/* My Leads filter */
+const mlb = document.querySelectorAll(".fchips button");
+const mlItems = document.querySelectorAll("#mllist .ld");
+const mlc = document.getElementById("mlcount");
+mlb.forEach(b=>b.addEventListener("click",()=>{
+  mlb.forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  let n=0;
+  mlItems.forEach(it=>{ const show = b.dataset.s==="all" || it.dataset.s===b.dataset.s; it.hidden=!show; if(show) n++; });
+  mlc.textContent="("+n+")";
+}));
+
+/* routing */
+function route(){
+  const h = location.hash, next = VIEWS[h] || "home", was = current;
+  current = next;
+  document.querySelectorAll(".caseview").forEach(v=>v.hidden=true);
+  if(io){ io.disconnect(); io=null; }
+  stopPhone();
+  if(next==="home"){
+    home.hidden=false; endBand.hidden=true;
+    const id = h.length>1 ? h.slice(1) : "";
+    const el = id ? document.getElementById(id) : null;
+    if(el){ el.scrollIntoView({behavior: was!=="home" ? "instant" : "auto"}); } else { window.scrollTo({top:0,behavior:"instant"}); }
+  } else {
+    home.hidden=true; endBand.hidden=false;
+    const view = document.getElementById(next);
+    view.hidden=false;
+    window.scrollTo({top:0,behavior:"instant"});
+    watchReveals(view);
+    if(next==="case-resolveai"){
+      resetConsole();
+      if("IntersectionObserver" in window){
+        io = new IntersectionObserver(es=>{ if(es[0].isIntersecting){ play(); io.disconnect(); } },{threshold:0.45});
+        io.observe(document.getElementById("app"));
+      }
+    }
+    if(next==="case-o2o") startPhone();
+  }
+  prog();
+}
+function go(){
+  const next = VIEWS[location.hash] || "home";
+  if(next!==current && document.startViewTransition && !reduce){ document.startViewTransition(route); } else { route(); }
+}
+window.addEventListener("hashchange", go);
+route();
+</script>
+</body>
+</html>
